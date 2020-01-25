@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<pnml>
+    <net>
+        <token id="BIT" red="255" green="0" blue="0"/>
+        <token id="NOM" red="0" green="0" blue="255"/>
+        <token id="TOK" red="0" green="0" blue="0"/>
+        <place id="subject_flag">
+            <graphics>
+                <position x="109.0" y="110.0"/>
+            </graphics>
+            <name>
+                <value>P0</value>
+                <graphics>
+                    <offset x="-8.0" y="16.0"/>
+                </graphics>
+            </name>
+            <capacity>
+                <value>1</value>
+            </capacity>
+            <initialMarking>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+                <value>BIT,1</value>
+            </initialMarking>
+        </place>
+        <place id="positive_tally">
+            <graphics>
+                <position x="737.0" y="74.0"/>
+            </graphics>
+            <name>
+                <value>P1</value>
+                <graphics>
+                    <offset x="119.0" y="21.0"/>
+                </graphics>
+            </name>
+            <capacity>
+                <value>0</value>
+            </capacity>
+            <initialMarking>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+                <value>NOM,1,TOK,0</value>
+            </initialMarking>
+        </place>
+        <place id="user_flag">
+            <graphics>
+                <position x="103.0" y="273.0"/>
+            </graphics>
+            <name>
+                <value>P0</value>
+                <graphics>
+                    <offset x="-12.0" y="19.0"/>
+                </graphics>
+            </name>
+            <capacity>
+                <value>1</value>
+            </capacity>
+            <initialMarking>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+                <value>BIT,1</value>
+            </initialMarking>
+        </place>
+        <place id="negative_tally">
+            <graphics>
+                <position x="737.0" y="113.0"/>
+            </graphics>
+            <name>
+                <value>P4</value>
+                <graphics>
+                    <offset x="123.0" y="21.0"/>
+                </graphics>
+            </name>
+            <capacity>
+                <value>0</value>
+            </capacity>
+            <initialMarking>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+                <value>NOM,1,TOK,0</value>
+            </initialMarking>
+        </place>
+        <place id="user_wallet">
+            <graphics>
+                <position x="506.0" y="489.0"/>
+            </graphics>
+            <name>
+                <value>P0</value>
+                <graphics>
+                    <offset x="54.0" y="53.0"/>
+                </graphics>
+            </name>
+            <capacity>
+                <value>0</value>
+            </capacity>
+            <initialMarking>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+                <value>NOM,0,TOK,1</value>
+            </initialMarking>
+        </place>
+        <place id="system_flag">
+            <graphics>
+                <position x="105.0" y="448.0"/>
+            </graphics>
+            <name>
+                <value>P1</value>
+                <graphics>
+                    <offset x="-11.0" y="1.0"/>
+                </graphics>
+            </name>
+            <capacity>
+                <value>1</value>
+            </capacity>
+            <initialMarking>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+                <value>BIT,1</value>
+            </initialMarking>
+        </place>
+        <place id="recall_tally">
+            <graphics>
+                <position x="736.0" y="417.0"/>
+            </graphics>
+            <name>
+                <value>P5</value>
+                <graphics>
+                    <offset x="105.0" y="21.0"/>
+                </graphics>
+            </name>
+            <capacity>
+                <value>0</value>
+            </capacity>
+            <initialMarking>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+                <value>NOM,1,TOK,0</value>
+            </initialMarking>
+        </place>
+        <place id="subject_wallet">
+            <graphics>
+                <position x="499.0" y="6.0"/>
+            </graphics>
+            <name>
+                <value>P2</value>
+                <graphics>
+                    <offset x="117.0" y="22.0"/>
+                </graphics>
+            </name>
+            <capacity>
+                <value>0</value>
+            </capacity>
+            <initialMarking>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+                <value>TOK,1</value>
+            </initialMarking>
+        </place>
+        <place id="system_wallet">
+            <graphics>
+                <position x="506.0" y="319.0"/>
+            </graphics>
+            <name>
+                <value>P3</value>
+                <graphics>
+                    <offset x="51.0" y="49.0"/>
+                </graphics>
+            </name>
+            <capacity>
+                <value>0</value>
+            </capacity>
+            <initialMarking>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+                <value>TOK,1</value>
+            </initialMarking>
+        </place>
+        <transition id="negative_tip">
+            <graphics>
+                <position x="261.0" y="253.0"/>
+            </graphics>
+            <name>
+                <value>T1</value>
+                <graphics>
+                    <offset x="-3.0" y="10.0"/>
+                </graphics>
+            </name>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <timed>
+                <value>false</value>
+            </timed>
+            <priority>
+                <value>1</value>
+            </priority>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1</value>
+            </rate>
+        </transition>
+        <transition id="negative_donate">
+            <graphics>
+                <position x="262.0" y="305.0"/>
+            </graphics>
+            <name>
+                <value>T0</value>
+                <graphics>
+                    <offset x="29.0" y="43.0"/>
+                </graphics>
+            </name>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <timed>
+                <value>false</value>
+            </timed>
+            <priority>
+                <value>1</value>
+            </priority>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1</value>
+            </rate>
+        </transition>
+        <transition id="positive_donate">
+            <graphics>
+                <position x="261.0" y="201.0"/>
+            </graphics>
+            <name>
+                <value>T7</value>
+                <graphics>
+                    <offset x="46.0" y="-3.0"/>
+                </graphics>
+            </name>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <timed>
+                <value>false</value>
+            </timed>
+            <priority>
+                <value>1</value>
+            </priority>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1</value>
+            </rate>
+        </transition>
+        <transition id="deposit_donation">
+            <graphics>
+                <position x="261.0" y="446.0"/>
+            </graphics>
+            <name>
+                <value>T0</value>
+                <graphics>
+                    <offset x="116.0" y="26.0"/>
+                </graphics>
+            </name>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <timed>
+                <value>false</value>
+            </timed>
+            <priority>
+                <value>1</value>
+            </priority>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1</value>
+            </rate>
+        </transition>
+        <transition id="deposit">
+            <graphics>
+                <position x="262.0" y="490.0"/>
+            </graphics>
+            <name>
+                <value>T1</value>
+                <graphics>
+                    <offset x="60.0" y="25.0"/>
+                </graphics>
+            </name>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <timed>
+                <value>false</value>
+            </timed>
+            <priority>
+                <value>1</value>
+            </priority>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1</value>
+            </rate>
+        </transition>
+        <transition id="vote">
+            <graphics>
+                <position x="685.0" y="279.0"/>
+            </graphics>
+            <name>
+                <value>T3</value>
+                <graphics>
+                    <offset x="12.0" y="-12.0"/>
+                </graphics>
+            </name>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <timed>
+                <value>false</value>
+            </timed>
+            <priority>
+                <value>1</value>
+            </priority>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1</value>
+            </rate>
+        </transition>
+        <transition id="recall">
+            <graphics>
+                <position x="746.0" y="279.0"/>
+            </graphics>
+            <name>
+                <value>T2</value>
+                <graphics>
+                    <offset x="18.0" y="-18.0"/>
+                </graphics>
+            </name>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <timed>
+                <value>false</value>
+            </timed>
+            <priority>
+                <value>1</value>
+            </priority>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1</value>
+            </rate>
+        </transition>
+        <transition id="refund">
+            <graphics>
+                <position x="797.0" y="280.0"/>
+            </graphics>
+            <name>
+                <value>T1</value>
+                <graphics>
+                    <offset x="27.0" y="-17.0"/>
+                </graphics>
+            </name>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <timed>
+                <value>false</value>
+            </timed>
+            <priority>
+                <value>1</value>
+            </priority>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1</value>
+            </rate>
+        </transition>
+        <transition id="tip_user">
+            <graphics>
+                <position x="264.0" y="9.0"/>
+            </graphics>
+            <name>
+                <value>T0</value>
+                <graphics>
+                    <offset x="-12.0" y="25.0"/>
+                </graphics>
+            </name>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <timed>
+                <value>false</value>
+            </timed>
+            <priority>
+                <value>1</value>
+            </priority>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1</value>
+            </rate>
+        </transition>
+        <transition id="withdraw">
+            <graphics>
+                <position x="260.0" y="393.0"/>
+            </graphics>
+            <name>
+                <value>T0</value>
+                <graphics>
+                    <offset x="68.0" y="15.0"/>
+                </graphics>
+            </name>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <timed>
+                <value>false</value>
+            </timed>
+            <priority>
+                <value>1</value>
+            </priority>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1</value>
+            </rate>
+        </transition>
+        <transition id="positive_tip">
+            <graphics>
+                <position x="263.0" y="77.0"/>
+            </graphics>
+            <name>
+                <value>T5</value>
+                <graphics>
+                    <offset x="-1.0" y="37.0"/>
+                </graphics>
+            </name>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <timed>
+                <value>false</value>
+            </timed>
+            <priority>
+                <value>1</value>
+            </priority>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1</value>
+            </rate>
+        </transition>
+        <arc id="T2 TO P0" source="recall" target="user_wallet">
+            <arcpath id="" x="746.0" y="294.0" curvePoint="false"/>
+            <arcpath id="" x="532.0" y="494.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>TOK,1</value>
+            </inscription>
+        </arc>
+        <arc id="T3 TO P3" source="vote" target="system_wallet">
+            <arcpath id="" x="685.0" y="294.0" curvePoint="false"/>
+            <arcpath id="" x="536.0" y="331.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>TOK,1</value>
+            </inscription>
+        </arc>
+        <arc id="T1 TO user_wallet" source="deposit" target="user_wallet">
+            <arcpath id="" x="272.0" y="505.0" curvePoint="false"/>
+            <arcpath id="" x="506.0" y="504.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>TOK,1</value>
+            </inscription>
+        </arc>
+        <arc id="T5 TO P1" source="positive_tip" target="positive_tally">
+            <arcpath id="" x="273.0" y="92.0" curvePoint="false"/>
+            <arcpath id="" x="737.0" y="89.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>NOM,1</value>
+            </inscription>
+        </arc>
+        <arc id="deposit_user TO user_wallet" source="tip_user" target="user_wallet">
+            <arcpath id="" x="269.0" y="39.0" curvePoint="false"/>
+            <arcpath id="" x="514.0" y="491.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>TOK,1</value>
+            </inscription>
+        </arc>
+        <arc id="T3 TO P5" source="vote" target="recall_tally">
+            <arcpath id="" x="690.0" y="309.0" curvePoint="false"/>
+            <arcpath id="" x="745.0" y="418.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>NOM,1</value>
+            </inscription>
+        </arc>
+        <arc id="T5 TO P2" source="positive_tip" target="subject_wallet">
+            <arcpath id="" x="273.0" y="92.0" curvePoint="false"/>
+            <arcpath id="" x="500.0" y="25.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>TOK,1</value>
+            </inscription>
+        </arc>
+        <arc id="T1 TO P2" source="negative_tip" target="subject_wallet">
+            <arcpath id="" x="271.0" y="268.0" curvePoint="false"/>
+            <arcpath id="" x="503.0" y="32.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>TOK,1</value>
+            </inscription>
+        </arc>
+        <arc id="refund TO user_wallet" source="refund" target="user_wallet">
+            <arcpath id="" x="797.0" y="295.0" curvePoint="false"/>
+            <arcpath id="" x="533.0" y="495.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>TOK,1</value>
+            </inscription>
+        </arc>
+        <arc id="T1 TO P4" source="negative_tip" target="negative_tally">
+            <arcpath id="" x="271.0" y="268.0" curvePoint="false"/>
+            <arcpath id="" x="738.0" y="132.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>NOM,1</value>
+            </inscription>
+        </arc>
+        <arc id="T0 TO P3" source="negative_donate" target="system_wallet">
+            <arcpath id="" x="272.0" y="320.0" curvePoint="false"/>
+            <arcpath id="" x="506.0" y="333.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>TOK,1</value>
+            </inscription>
+        </arc>
+        <arc id="T0 TO P4" source="negative_donate" target="negative_tally">
+            <arcpath id="" x="272.0" y="320.0" curvePoint="false"/>
+            <arcpath id="" x="738.0" y="134.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>NOM,1</value>
+            </inscription>
+        </arc>
+        <arc id="T7 TO P1" source="positive_donate" target="positive_tally">
+            <arcpath id="" x="271.0" y="216.0" curvePoint="false"/>
+            <arcpath id="" x="737.0" y="93.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>NOM,1</value>
+            </inscription>
+        </arc>
+        <arc id="T7 TO P3" source="positive_donate" target="system_wallet">
+            <arcpath id="" x="271.0" y="216.0" curvePoint="false"/>
+            <arcpath id="" x="507.0" y="328.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>TOK,1</value>
+            </inscription>
+        </arc>
+        <arc id="subject_wallet TO recall" source="subject_wallet" target="recall">
+            <arcpath id="" x="524.0" y="32.0" curvePoint="false"/>
+            <arcpath id="" x="751.0" y="279.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>TOK,1</value>
+            </inscription>
+        </arc>
+        <arc id="subject_flag TO deposit_user" source="subject_flag" target="tip_user">
+            <arcpath id="" x="136.0" y="116.0" curvePoint="false"/>
+            <arcpath id="" x="264.0" y="24.0" curvePoint="false"/>
+            <type value="inhibitor"/>
+            <inscription>
+                <value></value>
+            </inscription>
+        </arc>
+        <arc id="P0 TO T0" source="user_wallet" target="negative_donate">
+            <arcpath id="" x="509.0" y="495.0" curvePoint="false"/>
+            <arcpath id="" x="272.0" y="320.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>TOK,1</value>
+            </inscription>
+        </arc>
+        <arc id="P0 TO T1" source="user_wallet" target="negative_tip">
+            <arcpath id="" x="510.0" y="494.0" curvePoint="false"/>
+            <arcpath id="" x="271.0" y="268.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>TOK,1</value>
+            </inscription>
+        </arc>
+        <arc id="system_flag TO deposit_donation" source="system_flag" target="deposit_donation">
+            <arcpath id="" x="135.0" y="463.0" curvePoint="false"/>
+            <arcpath id="" x="261.0" y="461.0" curvePoint="false"/>
+            <type value="inhibitor"/>
+            <inscription>
+                <value></value>
+            </inscription>
+        </arc>
+        <arc id="P0 TO T5" source="user_wallet" target="positive_tip">
+            <arcpath id="" x="513.0" y="491.0" curvePoint="false"/>
+            <arcpath id="" x="268.0" y="107.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>TOK,1</value>
+            </inscription>
+        </arc>
+        <arc id="user_wallet TO recall_vote" source="user_wallet" target="vote">
+            <arcpath id="" x="530.0" y="492.0" curvePoint="false"/>
+            <arcpath id="" x="690.0" y="309.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>TOK,1</value>
+            </inscription>
+        </arc>
+        <arc id="user_flag TO recall_vote" source="user_flag" target="vote">
+            <arcpath id="" x="133.0" y="288.0" curvePoint="false"/>
+            <arcpath id="" x="685.0" y="294.0" curvePoint="false"/>
+            <type value="inhibitor"/>
+            <inscription>
+                <value></value>
+            </inscription>
+        </arc>
+        <arc id="subject_wallet TO T0" source="subject_wallet" target="tip_user">
+            <arcpath id="" x="499.0" y="21.0" curvePoint="false"/>
+            <arcpath id="" x="274.0" y="24.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>TOK,1</value>
+            </inscription>
+        </arc>
+        <arc id="P0 TO T7" source="user_wallet" target="positive_donate">
+            <arcpath id="" x="511.0" y="493.0" curvePoint="false"/>
+            <arcpath id="" x="266.0" y="231.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>TOK,1</value>
+            </inscription>
+        </arc>
+        <arc id="subject_flag TO refund" source="subject_flag" target="refund">
+            <arcpath id="" x="139.0" y="129.0" curvePoint="false"/>
+            <arcpath id="" x="797.0" y="295.0" curvePoint="false"/>
+            <type value="inhibitor"/>
+            <inscription>
+                <value></value>
+            </inscription>
+        </arc>
+        <arc id="user_flag TO pos_nom_donate" source="user_flag" target="positive_donate">
+            <arcpath id="" x="131.0" y="281.0" curvePoint="false"/>
+            <arcpath id="" x="261.0" y="216.0" curvePoint="false"/>
+            <type value="inhibitor"/>
+            <inscription>
+                <value></value>
+            </inscription>
+        </arc>
+        <arc id="user_flag TO neg_nom_tip" source="user_flag" target="negative_tip">
+            <arcpath id="" x="133.0" y="286.0" curvePoint="false"/>
+            <arcpath id="" x="261.0" y="268.0" curvePoint="false"/>
+            <type value="inhibitor"/>
+            <inscription>
+                <value></value>
+            </inscription>
+        </arc>
+        <arc id="P4 TO T2" source="negative_tally" target="recall">
+            <arcpath id="" x="752.0" y="143.0" curvePoint="false"/>
+            <arcpath id="" x="751.0" y="279.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>NOM,1</value>
+            </inscription>
+        </arc>
+        <arc id="subject_wallet TO refund" source="subject_wallet" target="refund">
+            <arcpath id="" x="525.0" y="31.0" curvePoint="false"/>
+            <arcpath id="" x="797.0" y="295.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>TOK,1</value>
+            </inscription>
+        </arc>
+        <arc id="user_flag TO withdraw" source="user_flag" target="withdraw">
+            <arcpath id="" x="130.0" y="297.0" curvePoint="false"/>
+            <arcpath id="" x="260.0" y="408.0" curvePoint="false"/>
+            <type value="inhibitor"/>
+            <inscription>
+                <value></value>
+            </inscription>
+        </arc>
+        <arc id="user_flag TO pos_nom_tip" source="user_flag" target="positive_tip">
+            <arcpath id="" x="127.0" y="276.0" curvePoint="false"/>
+            <arcpath id="" x="268.0" y="107.0" curvePoint="false"/>
+            <type value="inhibitor"/>
+            <inscription>
+                <value></value>
+            </inscription>
+        </arc>
+        <arc id="system_flag TO withdraw" source="system_flag" target="withdraw">
+            <arcpath id="" x="134.0" y="458.0" curvePoint="false"/>
+            <arcpath id="" x="260.0" y="408.0" curvePoint="false"/>
+            <type value="inhibitor"/>
+            <inscription>
+                <value></value>
+            </inscription>
+        </arc>
+        <arc id="user_wallet TO T0" source="user_wallet" target="withdraw">
+            <arcpath id="" x="507.0" y="499.0" curvePoint="false"/>
+            <arcpath id="" x="270.0" y="408.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>TOK,1</value>
+            </inscription>
+        </arc>
+        <arc id="system_flag TO deposit" source="system_flag" target="deposit">
+            <arcpath id="" x="134.0" y="467.0" curvePoint="false"/>
+            <arcpath id="" x="262.0" y="505.0" curvePoint="false"/>
+            <type value="inhibitor"/>
+            <inscription>
+                <value></value>
+            </inscription>
+        </arc>
+        <arc id="subject_flag TO recall" source="subject_flag" target="recall">
+            <arcpath id="" x="138.0" y="129.0" curvePoint="false"/>
+            <arcpath id="" x="746.0" y="294.0" curvePoint="false"/>
+            <type value="inhibitor"/>
+            <inscription>
+                <value></value>
+            </inscription>
+        </arc>
+        <arc id="recall_tally TO refund" source="recall_tally" target="refund">
+            <arcpath id="" x="756.0" y="418.0" curvePoint="false"/>
+            <arcpath id="" x="802.0" y="310.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>NOM,1</value>
+            </inscription>
+        </arc>
+        <arc id="user_flag TO deposit" source="user_flag" target="deposit">
+            <arcpath id="" x="126.0" y="300.0" curvePoint="false"/>
+            <arcpath id="" x="267.0" y="490.0" curvePoint="false"/>
+            <type value="inhibitor"/>
+            <inscription>
+                <value></value>
+            </inscription>
+        </arc>
+        <arc id="user_flag TO neg_nom_donate" source="user_flag" target="negative_donate">
+            <arcpath id="" x="133.0" y="291.0" curvePoint="false"/>
+            <arcpath id="" x="262.0" y="320.0" curvePoint="false"/>
+            <type value="inhibitor"/>
+            <inscription>
+                <value></value>
+            </inscription>
+        </arc>
+        <arc id="P5 TO T2" source="recall_tally" target="recall">
+            <arcpath id="" x="751.0" y="417.0" curvePoint="false"/>
+            <arcpath id="" x="751.0" y="309.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>NOM,1</value>
+            </inscription>
+        </arc>
+        <arc id="donate_wallet TO T0" source="system_wallet" target="deposit_donation">
+            <arcpath id="" x="508.0" y="341.0" curvePoint="false"/>
+            <arcpath id="" x="271.0" y="461.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>TOK,1</value>
+            </inscription>
+        </arc>
+    </net>
+</pnml>

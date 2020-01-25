@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<pnml>
+    <net>
+        <token id="BIT" red="255" green="0" blue="0"/>
+        <token id="TOK" red="0" green="0" blue="0"/>
+        <labels border="true" x="502" y="71" width="100" height="50">
+            <text>
+GET:  retrieve data for a given address
+
+PUT:  trigger an action without sending a payload
+
+POST: trigger an action and include a payload
+         </text>
+        </labels>
+        <place id="user_flag">
+            <graphics>
+                <position x="237.0" y="148.0"/>
+            </graphics>
+            <name>
+                <value>P0</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <capacity>
+                <value>0</value>
+            </capacity>
+            <initialMarking>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+                <value>BIT,1,TOK,0</value>
+            </initialMarking>
+        </place>
+        <place id="user_wallet">
+            <graphics>
+                <position x="361.0" y="28.0"/>
+            </graphics>
+            <name>
+                <value>P1</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <capacity>
+                <value>0</value>
+            </capacity>
+            <initialMarking>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+                <value>BIT,0,TOK,1</value>
+            </initialMarking>
+        </place>
+        <place id="system_flag">
+            <graphics>
+                <position x="137.0" y="28.0"/>
+            </graphics>
+            <name>
+                <value>P0</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <capacity>
+                <value>0</value>
+            </capacity>
+            <initialMarking>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+                <value>BIT,1</value>
+            </initialMarking>
+        </place>
+        <transition id="POST">
+            <graphics>
+                <position x="375.0" y="218.0"/>
+            </graphics>
+            <name>
+                <value>T0</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <timed>
+                <value>false</value>
+            </timed>
+            <priority>
+                <value>1</value>
+            </priority>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1</value>
+            </rate>
+        </transition>
+        <transition id="GET">
+            <graphics>
+                <position x="374.0" y="91.0"/>
+            </graphics>
+            <name>
+                <value>T1</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <timed>
+                <value>false</value>
+            </timed>
+            <priority>
+                <value>1</value>
+            </priority>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1</value>
+            </rate>
+        </transition>
+        <transition id="create">
+            <graphics>
+                <position x="247.0" y="28.0"/>
+            </graphics>
+            <name>
+                <value>T0</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <timed>
+                <value>false</value>
+            </timed>
+            <priority>
+                <value>1</value>
+            </priority>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1</value>
+            </rate>
+        </transition>
+        <transition id="PUT">
+            <graphics>
+                <position x="374.0" y="153.0"/>
+            </graphics>
+            <name>
+                <value>T0</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <timed>
+                <value>false</value>
+            </timed>
+            <priority>
+                <value>1</value>
+            </priority>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1</value>
+            </rate>
+        </transition>
+        <arc id="user_wallet TO create" source="user_wallet" target="create">
+            <arcpath id="" x="361.0" y="43.0" curvePoint="false"/>
+            <arcpath id="" x="257.0" y="43.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>TOK,1</value>
+            </inscription>
+        </arc>
+        <arc id="P0 TO POST" source="user_flag" target="POST">
+            <arcpath id="" x="265.0" y="170.0" curvePoint="false"/>
+            <arcpath id="" x="375.0" y="233.0" curvePoint="false"/>
+            <type value="inhibitor"/>
+            <inscription>
+                <value></value>
+            </inscription>
+        </arc>
+        <arc id="P0 TO PUT" source="user_flag" target="PUT">
+            <arcpath id="" x="267.0" y="164.0" curvePoint="false"/>
+            <arcpath id="" x="374.0" y="168.0" curvePoint="false"/>
+            <type value="inhibitor"/>
+            <inscription>
+                <value></value>
+            </inscription>
+        </arc>
+        <arc id="user_flag TO create" source="user_flag" target="create">
+            <arcpath id="" x="252.0" y="148.0" curvePoint="false"/>
+            <arcpath id="" x="252.0" y="58.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>BIT,1</value>
+            </inscription>
+        </arc>
+        <arc id="P0 TO GET" source="user_flag" target="GET">
+            <arcpath id="" x="266.0" y="157.0" curvePoint="false"/>
+            <arcpath id="" x="374.0" y="106.0" curvePoint="false"/>
+            <type value="inhibitor"/>
+            <inscription>
+                <value></value>
+            </inscription>
+        </arc>
+        <arc id="system_flag TO create" source="system_flag" target="create">
+            <arcpath id="" x="167.0" y="43.0" curvePoint="false"/>
+            <arcpath id="" x="247.0" y="43.0" curvePoint="false"/>
+            <type value="inhibitor"/>
+            <inscription>
+                <value></value>
+            </inscription>
+        </arc>
+    </net>
+</pnml>

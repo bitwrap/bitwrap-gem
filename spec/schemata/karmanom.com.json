@@ -1,0 +1,675 @@
+{
+  "nodes": [
+    {
+      "id": "0",
+      "label": "negative_tip",
+      "color": "rgb(200,200,200)",
+      "size": 1.0,
+      "x": 261,
+      "y": 253,
+      "attributes": {
+        "type": "Transition"
+      }
+    },
+    {
+      "id": "1",
+      "label": "positive_donate",
+      "color": "rgb(200,200,200)",
+      "size": 1.0,
+      "x": 261,
+      "y": 201,
+      "attributes": {
+        "type": "Transition"
+      }
+    },
+    {
+      "id": "2",
+      "label": "negative_donate",
+      "color": "rgb(200,200,200)",
+      "size": 1.0,
+      "x": 262,
+      "y": 305,
+      "attributes": {
+        "type": "Transition"
+      }
+    },
+    {
+      "id": "3",
+      "label": "deposit",
+      "color": "rgb(200,200,200)",
+      "size": 1.0,
+      "x": 262,
+      "y": 490,
+      "attributes": {
+        "type": "Transition"
+      }
+    },
+    {
+      "id": "4",
+      "label": "deposit_donation",
+      "color": "rgb(200,200,200)",
+      "size": 1.0,
+      "x": 261,
+      "y": 446,
+      "attributes": {
+        "type": "Transition"
+      }
+    },
+    {
+      "id": "5",
+      "label": "refund",
+      "color": "rgb(200,200,200)",
+      "size": 1.0,
+      "x": 797,
+      "y": 280,
+      "attributes": {
+        "type": "Transition"
+      }
+    },
+    {
+      "id": "6",
+      "label": "recall",
+      "color": "rgb(200,200,200)",
+      "size": 1.0,
+      "x": 746,
+      "y": 279,
+      "attributes": {
+        "type": "Transition"
+      }
+    },
+    {
+      "id": "7",
+      "label": "vote",
+      "color": "rgb(200,200,200)",
+      "size": 1.0,
+      "x": 685,
+      "y": 279,
+      "attributes": {
+        "type": "Transition"
+      }
+    },
+    {
+      "id": "8",
+      "label": "withdraw",
+      "color": "rgb(200,200,200)",
+      "size": 1.0,
+      "x": 260,
+      "y": 393,
+      "attributes": {
+        "type": "Transition"
+      }
+    },
+    {
+      "id": "9",
+      "label": "tip_user",
+      "color": "rgb(200,200,200)",
+      "size": 1.0,
+      "x": 264,
+      "y": 9,
+      "attributes": {
+        "type": "Transition"
+      }
+    },
+    {
+      "id": "10",
+      "label": "positive_tip",
+      "color": "rgb(200,200,200)",
+      "size": 1.0,
+      "x": 263,
+      "y": 77,
+      "attributes": {
+        "type": "Transition"
+      }
+    },
+    {
+      "id": "11",
+      "label": "subject_flag",
+      "color": "rgb(400,400,400)",
+      "size": 1.0,
+      "x": 109,
+      "y": 110,
+      "attributes": {
+        "type": "Place",
+        "capacity": 1,
+        "Token::BIT": 1
+      }
+    },
+    {
+      "id": "12",
+      "label": "user_flag",
+      "color": "rgb(400,400,400)",
+      "size": 1.0,
+      "x": 103,
+      "y": 273,
+      "attributes": {
+        "type": "Place",
+        "capacity": 1,
+        "Token::BIT": 1
+      }
+    },
+    {
+      "id": "13",
+      "label": "positive_tally",
+      "color": "rgb(400,400,400)",
+      "size": 1.0,
+      "x": 737,
+      "y": 74,
+      "attributes": {
+        "type": "Place",
+        "capacity": 0,
+        "Token::NOM": 1,
+        "Token::TOK": 0
+      }
+    },
+    {
+      "id": "14",
+      "label": "negative_tally",
+      "color": "rgb(400,400,400)",
+      "size": 1.0,
+      "x": 737,
+      "y": 113,
+      "attributes": {
+        "type": "Place",
+        "capacity": 0,
+        "Token::NOM": 1,
+        "Token::TOK": 0
+      }
+    },
+    {
+      "id": "15",
+      "label": "system_flag",
+      "color": "rgb(400,400,400)",
+      "size": 1.0,
+      "x": 105,
+      "y": 448,
+      "attributes": {
+        "type": "Place",
+        "capacity": 1,
+        "Token::BIT": 1
+      }
+    },
+    {
+      "id": "16",
+      "label": "user_wallet",
+      "color": "rgb(400,400,400)",
+      "size": 1.0,
+      "x": 506,
+      "y": 489,
+      "attributes": {
+        "type": "Place",
+        "capacity": 0,
+        "Token::NOM": 0,
+        "Token::TOK": 1
+      }
+    },
+    {
+      "id": "17",
+      "label": "recall_tally",
+      "color": "rgb(400,400,400)",
+      "size": 1.0,
+      "x": 736,
+      "y": 417,
+      "attributes": {
+        "type": "Place",
+        "capacity": 0,
+        "Token::NOM": 1,
+        "Token::TOK": 0
+      }
+    },
+    {
+      "id": "18",
+      "label": "subject_wallet",
+      "color": "rgb(400,400,400)",
+      "size": 1.0,
+      "x": 499,
+      "y": 6,
+      "attributes": {
+        "type": "Place",
+        "capacity": 0,
+        "Token::TOK": 1
+      }
+    },
+    {
+      "id": "19",
+      "label": "system_wallet",
+      "color": "rgb(400,400,400)",
+      "size": 1.0,
+      "x": 506,
+      "y": 319,
+      "attributes": {
+        "type": "Place",
+        "capacity": 0,
+        "Token::TOK": 1
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "0",
+      "source": "6",
+      "target": "16",
+      "label": "recall -> user_wallet",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::TOK": "1"
+      }
+    },
+    {
+      "id": "1",
+      "source": "7",
+      "target": "19",
+      "label": "vote -> system_wallet",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::TOK": "1"
+      }
+    },
+    {
+      "id": "2",
+      "source": "3",
+      "target": "16",
+      "label": "deposit -> user_wallet",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::TOK": "1"
+      }
+    },
+    {
+      "id": "3",
+      "source": "10",
+      "target": "13",
+      "label": "positive_tip -> positive_tally",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::NOM": "1"
+      }
+    },
+    {
+      "id": "4",
+      "source": "9",
+      "target": "16",
+      "label": "tip_user -> user_wallet",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::TOK": "1"
+      }
+    },
+    {
+      "id": "5",
+      "source": "7",
+      "target": "17",
+      "label": "vote -> recall_tally",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::NOM": "1"
+      }
+    },
+    {
+      "id": "6",
+      "source": "10",
+      "target": "18",
+      "label": "positive_tip -> subject_wallet",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::TOK": "1"
+      }
+    },
+    {
+      "id": "7",
+      "source": "0",
+      "target": "18",
+      "label": "negative_tip -> subject_wallet",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::TOK": "1"
+      }
+    },
+    {
+      "id": "8",
+      "source": "5",
+      "target": "16",
+      "label": "refund -> user_wallet",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::TOK": "1"
+      }
+    },
+    {
+      "id": "9",
+      "source": "0",
+      "target": "14",
+      "label": "negative_tip -> negative_tally",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::NOM": "1"
+      }
+    },
+    {
+      "id": "10",
+      "source": "2",
+      "target": "19",
+      "label": "negative_donate -> system_wallet",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::TOK": "1"
+      }
+    },
+    {
+      "id": "11",
+      "source": "2",
+      "target": "14",
+      "label": "negative_donate -> negative_tally",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::NOM": "1"
+      }
+    },
+    {
+      "id": "12",
+      "source": "1",
+      "target": "13",
+      "label": "positive_donate -> positive_tally",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::NOM": "1"
+      }
+    },
+    {
+      "id": "13",
+      "source": "1",
+      "target": "19",
+      "label": "positive_donate -> system_wallet",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::TOK": "1"
+      }
+    },
+    {
+      "id": "14",
+      "source": "18",
+      "target": "6",
+      "label": "subject_wallet -> recall",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::TOK": "1"
+      }
+    },
+    {
+      "id": "15",
+      "source": "16",
+      "target": "2",
+      "label": "user_wallet -> negative_donate",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::TOK": "1"
+      }
+    },
+    {
+      "id": "16",
+      "source": "11",
+      "target": "9",
+      "label": "subject_flag -> tip_user",
+      "type": "arrow",
+      "attributes": {
+        "type": "InhibitorArc"
+      }
+    },
+    {
+      "id": "17",
+      "source": "16",
+      "target": "0",
+      "label": "user_wallet -> negative_tip",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::TOK": "1"
+      }
+    },
+    {
+      "id": "18",
+      "source": "15",
+      "target": "4",
+      "label": "system_flag -> deposit_donation",
+      "type": "arrow",
+      "attributes": {
+        "type": "InhibitorArc"
+      }
+    },
+    {
+      "id": "19",
+      "source": "16",
+      "target": "10",
+      "label": "user_wallet -> positive_tip",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::TOK": "1"
+      }
+    },
+    {
+      "id": "20",
+      "source": "16",
+      "target": "1",
+      "label": "user_wallet -> positive_donate",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::TOK": "1"
+      }
+    },
+    {
+      "id": "21",
+      "source": "18",
+      "target": "9",
+      "label": "subject_wallet -> tip_user",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::TOK": "1"
+      }
+    },
+    {
+      "id": "22",
+      "source": "12",
+      "target": "7",
+      "label": "user_flag -> vote",
+      "type": "arrow",
+      "attributes": {
+        "type": "InhibitorArc"
+      }
+    },
+    {
+      "id": "23",
+      "source": "16",
+      "target": "7",
+      "label": "user_wallet -> vote",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::TOK": "1"
+      }
+    },
+    {
+      "id": "24",
+      "source": "11",
+      "target": "5",
+      "label": "subject_flag -> refund",
+      "type": "arrow",
+      "attributes": {
+        "type": "InhibitorArc"
+      }
+    },
+    {
+      "id": "25",
+      "source": "12",
+      "target": "1",
+      "label": "user_flag -> positive_donate",
+      "type": "arrow",
+      "attributes": {
+        "type": "InhibitorArc"
+      }
+    },
+    {
+      "id": "26",
+      "source": "12",
+      "target": "0",
+      "label": "user_flag -> negative_tip",
+      "type": "arrow",
+      "attributes": {
+        "type": "InhibitorArc"
+      }
+    },
+    {
+      "id": "27",
+      "source": "14",
+      "target": "6",
+      "label": "negative_tally -> recall",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::NOM": "1"
+      }
+    },
+    {
+      "id": "28",
+      "source": "18",
+      "target": "5",
+      "label": "subject_wallet -> refund",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::TOK": "1"
+      }
+    },
+    {
+      "id": "29",
+      "source": "12",
+      "target": "8",
+      "label": "user_flag -> withdraw",
+      "type": "arrow",
+      "attributes": {
+        "type": "InhibitorArc"
+      }
+    },
+    {
+      "id": "30",
+      "source": "12",
+      "target": "10",
+      "label": "user_flag -> positive_tip",
+      "type": "arrow",
+      "attributes": {
+        "type": "InhibitorArc"
+      }
+    },
+    {
+      "id": "31",
+      "source": "15",
+      "target": "8",
+      "label": "system_flag -> withdraw",
+      "type": "arrow",
+      "attributes": {
+        "type": "InhibitorArc"
+      }
+    },
+    {
+      "id": "32",
+      "source": "16",
+      "target": "8",
+      "label": "user_wallet -> withdraw",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::TOK": "1"
+      }
+    },
+    {
+      "id": "33",
+      "source": "15",
+      "target": "3",
+      "label": "system_flag -> deposit",
+      "type": "arrow",
+      "attributes": {
+        "type": "InhibitorArc"
+      }
+    },
+    {
+      "id": "34",
+      "source": "11",
+      "target": "6",
+      "label": "subject_flag -> recall",
+      "type": "arrow",
+      "attributes": {
+        "type": "InhibitorArc"
+      }
+    },
+    {
+      "id": "35",
+      "source": "17",
+      "target": "5",
+      "label": "recall_tally -> refund",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::NOM": "1"
+      }
+    },
+    {
+      "id": "36",
+      "source": "12",
+      "target": "3",
+      "label": "user_flag -> deposit",
+      "type": "arrow",
+      "attributes": {
+        "type": "InhibitorArc"
+      }
+    },
+    {
+      "id": "37",
+      "source": "12",
+      "target": "2",
+      "label": "user_flag -> negative_donate",
+      "type": "arrow",
+      "attributes": {
+        "type": "InhibitorArc"
+      }
+    },
+    {
+      "id": "38",
+      "source": "19",
+      "target": "4",
+      "label": "system_wallet -> deposit_donation",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::TOK": "1"
+      }
+    },
+    {
+      "id": "39",
+      "source": "17",
+      "target": "6",
+      "label": "recall_tally -> recall",
+      "type": "arrow",
+      "attributes": {
+        "type": "Arc",
+        "TokenWeight::NOM": "1"
+      }
+    }
+  ]
+}

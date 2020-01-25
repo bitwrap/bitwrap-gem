@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<pnml>
+    <net>
+        <token id="Default" red="0" green="0" blue="0"/>
+        <token id="BIT" red="255" green="0" blue="0"/>
+        <token id="NOM" red="0" green="0" blue="255"/>
+        <place id="is_sub">
+            <graphics>
+                <position x="361.0" y="114.0"/>
+            </graphics>
+            <name>
+                <value>P2</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <capacity>
+                <value>1</value>
+            </capacity>
+            <initialMarking>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+                <value>BIT,1</value>
+            </initialMarking>
+        </place>
+        <place id="sub">
+            <graphics>
+                <position x="235.0" y="169.0"/>
+            </graphics>
+            <name>
+                <value>P0</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <capacity>
+                <value>0</value>
+            </capacity>
+            <initialMarking>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+                <value>NOM,1</value>
+            </initialMarking>
+        </place>
+        <place id="user">
+            <graphics>
+                <position x="114.0" y="341.0"/>
+            </graphics>
+            <name>
+                <value>P0</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <capacity>
+                <value>0</value>
+            </capacity>
+            <initialMarking>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+                <value>Default,1</value>
+            </initialMarking>
+        </place>
+        <place id="wallet">
+            <graphics>
+                <position x="362.0" y="336.0"/>
+            </graphics>
+            <name>
+                <value>P1</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <capacity>
+                <value>0</value>
+            </capacity>
+            <initialMarking>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+                <value>Default,1</value>
+            </initialMarking>
+        </place>
+        <transition id="fund">
+            <graphics>
+                <position x="121.0" y="232.0"/>
+            </graphics>
+            <name>
+                <value>T0</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <timed>
+                <value>false</value>
+            </timed>
+            <priority>
+                <value>1</value>
+            </priority>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1</value>
+            </rate>
+        </transition>
+        <transition id="burn">
+            <graphics>
+                <position x="372.0" y="227.0"/>
+            </graphics>
+            <name>
+                <value>T1</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <timed>
+                <value>false</value>
+            </timed>
+            <priority>
+                <value>1</value>
+            </priority>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1</value>
+            </rate>
+        </transition>
+        <transition id="defund">
+            <graphics>
+                <position x="254.0" y="399.0"/>
+            </graphics>
+            <name>
+                <value>T2</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <timed>
+                <value>false</value>
+            </timed>
+            <priority>
+                <value>1</value>
+            </priority>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1</value>
+            </rate>
+        </transition>
+        <arc id="fund TO sub" source="fund" target="sub">
+            <arcpath id="" x="131.0" y="247.0" curvePoint="false"/>
+            <arcpath id="" x="237.0" y="191.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>NOM,1</value>
+            </inscription>
+        </arc>
+        <arc id="fund TO wallet" source="fund" target="wallet">
+            <arcpath id="" x="131.0" y="247.0" curvePoint="false"/>
+            <arcpath id="" x="363.0" y="345.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>Default,1</value>
+            </inscription>
+        </arc>
+        <arc id="defund TO user" source="defund" target="user">
+            <arcpath id="" x="254.0" y="414.0" curvePoint="false"/>
+            <arcpath id="" x="143.0" y="362.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>Default,1</value>
+            </inscription>
+        </arc>
+        <arc id="burn TO user" source="burn" target="user">
+            <arcpath id="" x="372.0" y="242.0" curvePoint="false"/>
+            <arcpath id="" x="143.0" y="350.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>Default,1</value>
+            </inscription>
+        </arc>
+        <arc id="wallet TO defund" source="wallet" target="defund">
+            <arcpath id="" x="364.0" y="358.0" curvePoint="false"/>
+            <arcpath id="" x="264.0" y="414.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>Default,1</value>
+            </inscription>
+        </arc>
+        <arc id="is_sub TO burn" source="is_sub" target="burn">
+            <arcpath id="" x="376.0" y="144.0" curvePoint="false"/>
+            <arcpath id="" x="377.0" y="227.0" curvePoint="false"/>
+            <type value="inhibitor"/>
+            <inscription>
+                <value></value>
+            </inscription>
+        </arc>
+        <arc id="user TO fund" source="user" target="fund">
+            <arcpath id="" x="129.0" y="341.0" curvePoint="false"/>
+            <arcpath id="" x="126.0" y="262.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>Default,1</value>
+            </inscription>
+        </arc>
+        <arc id="wallet TO burn" source="wallet" target="burn">
+            <arcpath id="" x="377.0" y="336.0" curvePoint="false"/>
+            <arcpath id="" x="377.0" y="257.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>Default,1</value>
+            </inscription>
+        </arc>
+        <arc id="sub TO burn" source="sub" target="burn">
+            <arcpath id="" x="264.0" y="190.0" curvePoint="false"/>
+            <arcpath id="" x="372.0" y="242.0" curvePoint="false"/>
+            <type value="normal"/>
+            <inscription>
+                <value>NOM,1</value>
+            </inscription>
+        </arc>
+    </net>
+</pnml>

@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "pipe/jruby"
+
+ENV['JAVA_BIN'] ||= '/usr/bin/java'
+puts "Running: #{ENV['JAVA_BIN']} -jar #{Pipe::Jruby.jar_file} \n ctl+c to exit."
+`#{ENV['JAVA_BIN']} -jar #{Pipe::Jruby.jar_file}`
