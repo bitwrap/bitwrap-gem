@@ -1,6 +1,5 @@
 require 'spec_helper'
 require 'bitwrap/state_vector'
-require 'pipe/jruby'
 require 'json'
 require 'pp'
 

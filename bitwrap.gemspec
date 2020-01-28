@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["stackdump"]
   spec.email         = ["myork@stackdump.com"]
 
-  spec.summary       = %q{core lib for defining and crunning bitwrap state machines.}
-  spec.description   = %q{core lib for defining and running bitwrap state machines.}
+  spec.summary       = %q{Use pflow xml to load Petri-Net event models}
+  spec.description   = %q{Use pflow xml to load Petri-Net event models}
   spec.homepage      = "http://bitwrap.io"
   spec.license       = "MIT"
 
@@ -27,7 +27,6 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  #spec.add_development_dependency "pipe-jruby"
   spec.add_development_dependency "bundler", "~> 1.10"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec"

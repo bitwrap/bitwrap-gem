@@ -123,6 +123,7 @@ module Bitwrap
     end
 
     def refactor
+      # prunes unused places
       used_places = []
 
       @places = [].tap do |places|
